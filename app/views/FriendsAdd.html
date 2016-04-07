@@ -1,0 +1,25 @@
+﻿<div data-ng-controller="friendsController as vm">
+    <div class="container">
+        <div class="row">
+            <form data-ng-submit="vm.addFriend()">
+                <div class="form-group">
+                    <div class="form-group col-lg-12">
+                        <input type="text" placeholder="Name" data-ng-model="vm.friend.friendName" class="form-control" />
+                    </div>
+
+                    <div class="form-group col-lg-6">
+                        <input type="text" placeholder="E-mail address" data-ng-model="vm.friend.friendEmail" class="form-control" />
+                    </div>
+
+                    <div class="form-group col-lg-6">
+                        <input type="text" placeholder="Phone number" data-ng-model="vm.friend.friendPhone" class="form-control" />
+                    </div>
+
+                    <div class="form-group col-lg-6">
+                        <button type="submit" class="btn btn-success">Add</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

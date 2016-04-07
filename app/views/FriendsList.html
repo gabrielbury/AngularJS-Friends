@@ -1,0 +1,25 @@
+﻿<div data-ng-controller="friendsController as vm">
+    <h1>{{vm.title}}</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>E-mail</th>
+                            <th>Phone Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-ng-repeat="friend in vm.friends">
+                            <td>{{friend.friendName}}</td>
+                            <td>{{friend.friendEmail}}</td>
+                            <td>{{friend.friendPhone}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
