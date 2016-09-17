@@ -2,9 +2,9 @@
     angular.module('app')
         .controller('friendsController', friendsController);
 
-    friendsController.$inject = ['$scope', 'friendsService'];
+    friendsController.$inject = ['$scope', 'friendsService', '$location'];
 
-    function friendsController($scope, friendsService) {
+    function friendsController($scope, friendsService, $location) {
         var vm = this;
 
         vm.title = 'My Friends List';
@@ -14,6 +14,7 @@
         vm.addFriend = function () {
             friendsService.add(vm.friend);
             vm.friends = friendsService.list();
+            $location.path('/List');
         }
     }
 })()
